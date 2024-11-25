@@ -30,7 +30,8 @@ jobs:
           sleep 30
       - name:  Run Locust charge tests
         run: |
-          locust --headless \
+          locust -f locustfile.py \ 
+          --headless \
           -u 10000 \        
           -r 100 \        
           -t 2m \
